@@ -193,3 +193,101 @@ SELECT * FROM votes;
 ```
 
 ---
+
+### Set backend URL:
+
+```js
+const API = "http://localhost:5000";
+```
+
+---
+
+From project root:
+
+```bash
+npm start
+```
+
+---
+
+## 🔄 What happens when you run `npm start`
+
+* Backend starts using **nodemon**
+
+  * Auto-restarts on code changes
+* Frontend starts using **React dev server**
+
+  * Hot reload enabled
+* Logs appear in terminal:
+
+  * `[BACKEND]`
+  * `[FRONTEND]`
+
+---
+
+## 🌐 Access URLs
+
+* Frontend → http://localhost:3000
+* Backend → http://localhost:5000
+
+---
+
+# 🛑 Stop Application
+
+Press:
+
+```bash
+CTRL + C
+```
+
+👉 This will stop both frontend and backend.
+
+---
+
+# 🔧 Configuration Changes
+
+---
+
+## 🔁 Change Backend Port
+
+Edit:
+
+```
+backend/.env
+```
+
+```env
+PORT=6000
+```
+
+---
+
+## 🔁 Change Database Connection
+
+Edit:
+
+```
+backend/.env
+```
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=voting_app
+```
+
+---
+
+## 🔁 Update Frontend API (if port changes)
+
+If backend port changes (e.g., 6000), update:
+
+```
+frontend/src/api.js
+```
+
+```js
+const API = "http://localhost:6000";
+```
+

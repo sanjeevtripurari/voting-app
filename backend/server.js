@@ -1,4 +1,5 @@
-require("dotenv").config();
+
+require("dotenv").config({ path: __dirname + "/.env" });
 const express = require("express");
 const cors = require("cors");
 
@@ -18,3 +19,5 @@ app.get("/", (req, res) => {
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
+
+

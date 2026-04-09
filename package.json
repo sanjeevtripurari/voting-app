@@ -1,0 +1,14 @@
+{
+  "name": "voting-app",
+  "version": "1.0.0",
+  "scripts": {
+    "backend": "nodemon backend/server.js",
+    "frontend": "cd frontend && npm start",
+    "start": "concurrently -k -n BACKEND,FRONTEND -c green,blue \"npm run backend\" \"npm run frontend\"",
+    "stop": "node stop.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.0"
+  }
+}
